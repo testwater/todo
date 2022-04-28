@@ -1,67 +1,104 @@
-body{
-    text-align: center;
-    background: rgba(1, 63, 99, 0.699);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    box-sizing: border-box;
+*{
     margin: 0;
     padding: 0;
 }
-
-.checked{
-    text-decoration: line-through;
-    opacity: 0.7;
-} 
-#todos-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    text-align: center;
+    font-family: montserrat,sans-seriff;
+    background: rgba(1, 63, 99, 0.699);
+    box-sizing: border-box;
 }
-#todos{
-    min-width: 20%;
-
+section{
+    /* width: 100%; */
+width: 1200px;
+    /* background: green; */
+    margin: 0 auto;
 }
 h1{
     color: white;
+    margin-top: 70px;
+    font-size: 35px;
+    /* margin: 25px auto; */
 }
+input{
+    padding: 13px;
+    display: block;
+    border-radius: 25px;
+    border: none;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+}
+.todos-container{
+    width: 95%;
+    margin: auto;
+    /* background-color: red; */
+    padding: 5px;
+}
+
 button{
-    padding:8px;
-    background: rgb(30, 162, 185);
+    padding:5px;
     color: white;
-    border-radius: 20px;
-    width:100px;
-    border:2px solid #fafafa;
+    border-radius: 25px;
+    margin: 5px;
+    font-weight: bold;
 }
 button:hover{
     background: white;
     transition: 0.5s;
     color: black;
-    border:1px solid rgb(30, 162, 185);
+    border:2px solid rgb(30, 162, 185);
     cursor: pointer;
 }
-.remove:hover{
-    border: 1px solid red;
+.add{
+    background: rgb(30, 162, 185);
+    width:140px;
+    border:2px solid #fafafa;
+    font-size: 18px;
+    padding: 9px;
 }
-.checked{
-    text-decoration: line-through;
-    opacity: 0.7;
-} 
-.remove{
+.add:hover{
+    border:2px solid rgb(30, 162, 185);
+}
+.check,.remove{
+    width:70px;
+    border: 2px solid ;
+    padding: 5px;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+}
+.check{
+    margin-top: 15px;
+    background: rgb(30, 162, 185);
+}
+.remove{    
     background: red;
 }
-input{
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
+.remove:hover{
+    border: 2px solid red;
 }
+.checked{
+    opacity: 0.5;
+} 
 li{
     background: rgb(255, 255, 255);
-    margin: 10px;
-    height: 50px; 
+    margin: 15px;
     list-style: none;
-    display: grid;
-    grid-template-columns: 6fr 1fr 1fr;
     border-radius: 5px;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+@media (min-width:700px) {
+    input{
+        
+        display: unset;        
+        width: 50%;
+    }
+    .check,.remove{
+        width:80px;
+        padding: 10px;
+        font-size: 18px;
+    }
 }
